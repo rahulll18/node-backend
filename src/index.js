@@ -15,3 +15,8 @@ connectDB()
   .catch((err) => {
     console.log("Connection failed with mongodb", err);
   });
+
+//import the routes
+import userRouter from "./routes/user.route.js";
+
+app.use("/api/v1/users", userRouter);
